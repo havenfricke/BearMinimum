@@ -8,6 +8,7 @@ function _draw() {
   logger.log(values)
 }
 
+
 // Public
 export class ValuesController {
   constructor() {
