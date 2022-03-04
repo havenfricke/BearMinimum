@@ -18,9 +18,9 @@ export const PostSchema = new Schema(
   { timestamps: true, toJSON: { virtuals: true } }
 )
 
-// ValueSchema.virtual('creator', {
-//   localField: 'creatorId',
-//   foreignField: '_id',
-//   justOne: true,
-//   ref: 'Profile'
-// })
+PostSchema.virtual('creator', {
+  localField: 'creatorId',
+  foreignField: '_id',
+  justOne: true,
+  ref: 'Profile'
+})
