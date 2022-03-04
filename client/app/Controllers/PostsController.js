@@ -19,7 +19,7 @@ export class PostsController{
         try {
             await postsService.getPosts()
         } catch (error) {
-            console.erorr(error);
+            console.error(error);
         }
     }
 
