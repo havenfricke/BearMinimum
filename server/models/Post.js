@@ -10,8 +10,8 @@ export const PostSchema = new Schema(
     description: { type: String, required: true },
     creatorId: { type: Schema.Types.ObjectId, ref: 'Profile', required: true },
     imgUrl: {type: String, required: true},
-    upVote: {type: Number, required: true, default: 0},
-    downVote: {type: Number, required: true, default: 0},
+    upVote: {type: Number,  default: 0},
+    downVote: {type: Number,  default: 0},
 
 
   },
