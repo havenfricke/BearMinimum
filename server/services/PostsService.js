@@ -7,6 +7,10 @@ class PostsService {
         const posts = await dbContext.Posts.find(query).populate('creator', 'name')
         return posts
     }
+    async getPostById(id){
+        const onePost = await dbContext.Posts.findById(id).populate('creator', 'name')
+        return onePost
+    }
     async create(body){
         const post = await dbContext.Posts.create(body)
         await post.populate('creator', 'name')
@@ -25,10 +29,12 @@ class PostsService {
     }
 
     async remove(postId, userId){
-        const post = await dbContext.Posts.findById(postId)
-        if(post.creatorId.toString() !== userId){
+        const postToDelete = await dbContext.Posts.findById(postId)
+        if(postToDelete.creatorId.toString() !== userId){
             throw new Forbidden("this is not your post")
         }
+        await dbContext.Posts.findByIdAndDelete(postId)
+        return "Delorted"
     }
 
 

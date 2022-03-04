@@ -9,6 +9,8 @@ export class CommentsController extends BaseController{
         .get('', this.getAllComments)
         .use(Auth0Provider.getAuthorizedUserInfo)
         .post('', this.create)
+        .put('/:id', this.edit)
+        .delete('/:id', this.remove)
     }
 
 
@@ -30,6 +32,25 @@ export class CommentsController extends BaseController{
             next(error)
         }
     }
+    
+    async edit(req, res, next){
+        try {
+            req.body.id = req.params.id
+            const editComment = await commentsService.edit(req.body)
+            res.send(editComment)
+        } catch (error) {
+            next(error)
+        }
+    }
+    async remove(req, res, next){
+        try {
+            const message = await commentsService.remove(req.params.id)
+            res.send(message)
+        } catch (error) {
+            next(error)
+        }
+    }
+    
 
 
 }
