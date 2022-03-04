@@ -9,7 +9,7 @@ class CommentsService {
     }
     async create(body){
         const newComment = await dbContext.Comments.create(body)
-        newComment.populate('post', 'name')
+        newComment.populate('creator', 'name')
         return newComment
     }
     async edit(body){

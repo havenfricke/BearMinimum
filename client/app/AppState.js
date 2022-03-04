@@ -5,6 +5,8 @@ import { isValidProp } from './Utils/isValidProp.js'
 class AppState extends EventEmitter {
   user = {}
   account = {}
+  posts = []
+  comments = []
   /** @type {import('./Models/Value').Value[]} */
   values = []
   socketData = []
