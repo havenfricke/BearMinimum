@@ -1,6 +1,7 @@
 export class Post{
     constructor(data){
         this.id = data.id
+        this.author = data.creator.name
         this.title = data.title
         this.description = data.description
         this.imgUrl = data.imgUrl
@@ -9,6 +10,7 @@ export class Post{
     }
     get Template(){
         return `
+        <div> ${this.author} </div>
         <div> ${this.title} </div>
         <div> ${this.description} </div>
         `
