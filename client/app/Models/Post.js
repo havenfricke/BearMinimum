@@ -48,8 +48,6 @@ export class Post{
       <div class="input-group">
         <input required minlength="3" maxlength="50" type="text" class="form-control" placeholder="add a comment..." aria-label="comment"
           aria-describedby="comment" id="name">
-        <button class="btn btn-outline-secondary" type="submit" form="commentform" value="Submit"><i
-            class="mdi mdi-plus"></i></button>
       </div>
     </form>
         

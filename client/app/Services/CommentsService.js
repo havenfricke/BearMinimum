@@ -12,7 +12,9 @@ class CommentsService {
     async addComment(rawComment){
         const res = await api.post('api/comments', rawComment)
         console.log(res.data);
-        ProxyState.comments = [...ProxyState.comments, new Comment(res.data)]
+        let createdComment = new Comment(res.data)
+        ProxyState.comments = [...ProxyState.comments, createdComment]
+        ProxyState.posts = ProxyState.posts
     }
 }
 
