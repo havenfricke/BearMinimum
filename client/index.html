@@ -9,16 +9,36 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <title>BearMinimum</title>
+
+  <style>
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
+
+    body.debug .row {
+      outline: 2px dashed rgba(255, 0, 0);
+      outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+  </style>
 </head>
 
-<body>
+<body class="debug">
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+    <nav class="navbar d-flex align-items-centernavbar-dark navbar-expand bg-dark text-light">
       <a class="navbar-brand" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ml-2">BearMinimum</span>
+        <img class="img-fluid" src="https://drive.google.com/file/d/1HN8cTb6p_rXVIRUNld3aDPeEwtM6h05k/view" height=""
+          alt="" loading="lazy">
+        <span class="ml-2 fs-1">BearMinimum</span><button class="">+</button>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,32 +46,62 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <!-- NAVLINKS -->
+
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
     </nav>
   </header>
-  <main id="app">
-    <div class="container-fluid">
-      <div class="row my-3">
-        <div class="col-lg-5" id="auth-settings">
-          <div class="card p-2 skeleton-loader">
-            <div class="card-title p-2">
-              <div class="d-flex align-items-center">
-                <div class="skeleton-loader avatar"></div>
-                <div class="skeleton-loader text mx-2"></div>
+
+
+  <main id="app container">
+
+
+    <!-- END SECTION -->
+
+
+    <div class="row d-flex justify-content-center" id="">
+      <div class="col-md-4 p-3">
+        <div class="rounded shadow bg-white">
+          <div class="rounded-top text-center p-2">
+            <h4 class="d-flex justify-content-between">
+              <i class="mdi mdi-delete selectable" title="delete post" onclick=""></i>
+            </h4>
+          </div>
+
+          <div class="p-3">
+            <img class="col-12 p-3" src="https://via.placeholder.com/500x500" alt="">
+            <div class="row">
+              <div class="col-12 d-flex justify-content-around">
+                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button">20</i>
+                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button">2</i>
+                <button class="col-2 rounded-pill">+</button>
+              </div>
+              <div class="col-6">
+                <h1>Big bear</h1>
+                <h6>Big bear Description</h6>
+              </div>
+              <div class="col-6">
               </div>
             </div>
-            <div class="card-body border-top">
-              <div class="skeleton-loader text block"></div>
-              <div class="skeleton-loader text block"></div>
-              <div class="skeleton-loader text block"></div>
+            <div class="bg-secondary lighten-30 p-2 rounded">
+              <p><b>User</b></p>
+            </div>
+            <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
+              <p><b>User</b></p>
+              <div class="text-end">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    </span>
+    </div>
+
+
+
   </main>
   <footer class="container-fluid bg-dark text-light">
     <div class="row text-center">
