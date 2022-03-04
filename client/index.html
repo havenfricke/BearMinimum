@@ -34,11 +34,11 @@
 
 <body class="debug">
   <header>
-    <nav class="navbar d-flex align-items-centernavbar-dark navbar-expand bg-dark text-light">
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
       <a class="navbar-brand" href="#">
-        <img class="img-fluid" src="https://drive.google.com/file/d/1HN8cTb6p_rXVIRUNld3aDPeEwtM6h05k/view" height=""
-          alt="" loading="lazy">
-        <span class="ml-2 fs-1">BearMinimum</span><button class="">+</button>
+        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
+          loading="lazy">
+        <span class="ml-2">BearMinimum</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,15 +50,17 @@
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
+      <select class="form-control mx-2" name="sauce" id="sauce">
+        <option disabled selected>Choose your sauce</option>
+        <option>Red</option>
+        <option>White</option>
+        <option>BBQ</option>
+      </select>
     </nav>
   </header>
 
 
   <main id="app container">
-
-
-    <!-- END SECTION -->
-
 
     <div class="row d-flex justify-content-center" id="">
       <div class="col-md-4 p-3">
@@ -77,24 +79,40 @@
                 <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button">2</i>
                 <button class="col-2 rounded-pill">+</button>
               </div>
-              <div class="col-6">
+
+              <div class="col-12 bg-secondary">
                 <h1>Big bear</h1>
                 <h6>Big bear Description</h6>
               </div>
-              <div class="col-6">
+            </div>
+
+            <div style="height:33vh; overflow:auto;">
+              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
+                <p><b>User</b></p>
+                <p>User comment</p>
+                <div class="text-end">
+                </div>
+              </div>
+
+              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
+                <p><b>User</b></p>
+                <p>User comment</p>
+                <div class="text-end">
+                </div>
+              </div>
+
+              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
+                <p><b>User</b></p>
+                <p>User comment</p>
+                <div class="text-end">
+                </div>
               </div>
             </div>
-            <div class="bg-secondary lighten-30 p-2 rounded">
-              <p><b>User</b></p>
-            </div>
-            <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
-              <p><b>User</b></p>
-              <div class="text-end">
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
+    </div>
     </div>
 
     </span>
