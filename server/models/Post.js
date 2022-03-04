@@ -1,5 +1,8 @@
-import mongoose from 'mongoose'
+
+import mongoose from "mongoose"
 const Schema = mongoose.Schema
+
+
 
 export const PostSchema = new Schema(
   {
@@ -15,9 +18,9 @@ export const PostSchema = new Schema(
   { timestamps: true, toJSON: { virtuals: true } }
 )
 
-ValueSchema.virtual('creator', {
-  localField: 'creatorId',
-  foreignField: '_id',
-  justOne: true,
-  ref: 'Profile'
-})
+// ValueSchema.virtual('creator', {
+//   localField: 'creatorId',
+//   foreignField: '_id',
+//   justOne: true,
+//   ref: 'Profile'
+// })
