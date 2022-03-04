@@ -14,4 +14,17 @@ export class CommentsController{
     async getAll(){
         await commentsService.getAll()
     }
+
+    async addComment(postId){
+        window.event.preventDefault()
+        let form = window.event.target
+        const rawComment = {
+          postId,
+          description: form.name.value,
+          
+        
+        }
+        await commentsService.addComment(rawComment)
+        form.reset()
+    }
 }

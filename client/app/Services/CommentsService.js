@@ -9,6 +9,11 @@ class CommentsService {
         ProxyState.comments = res.data.map(c => new Comment(c))
         console.log(ProxyState.comments);
     }
+    async addComment(rawComment){
+        const res = await api.post('api/comments', rawComment)
+        console.log(res.data);
+        ProxyState.comments = [...ProxyState.comments, new Comment(res.data)]
+    }
 }
 
 export const commentsService = new CommentsService()
