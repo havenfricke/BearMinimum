@@ -23,11 +23,10 @@ export class PostsController {
         }
     }
 
-    async createPost(id) {
+    async createPost() {
         window.event.preventDefault()
         const form = window.event.target
         const newPost = {
-            id,
             /**@ts-ignore */
             title: form.title.target,
             /**@ts-ignore */
