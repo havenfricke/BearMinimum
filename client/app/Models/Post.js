@@ -7,8 +7,8 @@ export class Post {
     this.title = data.title
     this.description = data.description
     this.imgUrl = data.imgUrl
-    this.upVotesPost = data.upVotesPost
-    this.downVotesPost = data.downVotesPost
+    this.upVotesPost = data.upVotes
+    this.downVotesPost = data.downVotes
   }
   get Template() {
     return `

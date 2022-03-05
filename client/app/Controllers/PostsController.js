@@ -53,6 +53,21 @@ export class PostsController {
             logger.log(error)
         }
     }
+    async downVotesPost(id) {
+        try {
+            await postsService.downVotesPost(id)
+        } catch (error) {
+            logger.log(error)
+        }
+    }
+    async deletePost(id){
+        try {
+            await postsService.deletePost(id)
+            
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
 }
 

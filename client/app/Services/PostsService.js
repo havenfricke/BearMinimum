@@ -29,13 +29,13 @@ class PostsService {
         ProxyState.posts = [...ProxyState.posts, newPost]
     }
 
-    async upVote(id) {
-        let addVote = ProxyState.posts
-        const found = addVote.find(Post => id == Post.id)
-        found.upVotes++
+    async downVotesPost(id) {
+        let downVote = ProxyState.posts
+        const found = downVote.find(Post => id == Post.id)
+        found.downVotesPost++
         const res = await api.put(`api/posts/${found.id}`, found)
         ProxyState.posts = ProxyState.posts
-        console.log('PostService:Upvote')
+        console.log('PostService:DownVote')
 
     }
     async deletePost(id) {
