@@ -12,7 +12,7 @@ export class Post {
   }
   get Template() {
     return `
-        <div class="col-4">
+        <div class="col-md-5">
         <div class="rounded shadow bg-white">
           <div class="rounded-top text-center p-2">
             <h4 class="d-flex justify-content-between">
