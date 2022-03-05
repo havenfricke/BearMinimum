@@ -14,7 +14,7 @@ export class Post {
   get Template() {
     return `
         <div class="col-md-5">
-        <div class="rounded shadow bg-white">
+        <div class="rounded shadow modal-bg modal-bg">
           <div class="rounded-top text-center p-2">
             <h4 class="d-flex justify-content-between">
               <i class="mdi mdi-delete selectable" title="delete post" onclick="app.postsController.deletePost('${this.id}')"></i>

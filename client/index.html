@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bebas+Neue&family=Pacifico&family=Secular+One&family=Signika+Negative:wght@300;700&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -35,12 +40,14 @@
 
 
 <body>
+  <img src="/client/assets/img/logo.png" alt="">
 
 
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
       <a class="navbar-brand" href="#">
         <img src="/client/assets/img/bear_minumum_creative_logo.png" height="45" alt="" loading="lazy">
+        <img src="/client/assets/img/logo.png" alt="">
         <span class="ml-2">BearMinimum</span>
 
         <button class="rounded-pill" data-bs-target="#create-modal" data-bs-toggle="modal"
@@ -70,11 +77,12 @@
 
 
   <!--BS- Modal -->
-  <div class="modal fade" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade modal-bg" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Create a Post</h5>
+        <div class="modal-header label-dark">
+          <h2 class="modal-title" id="exampleModalLabel">Create a Post</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -94,7 +102,9 @@
               <input required type="text" class="form-control" name="description" id="description"
                 aria-describedby="helpId" placeholder="" rows="3">
             </div>
-            <button class="col-4 offset-8 btn btn-success">Create</button>
+            <button class="col-4 btn bear-btn">
+              <h3>Create</h3>
+            </button>
           </form>
         </div>
       </div>
@@ -105,12 +115,12 @@
 
 
 
-  <main id="app" class="container-fluid">
+  <main id="app" class="container-fluid label-dark">
 
 
 
   </main>
-  <section class="container-fluid">
+  <section class="container-fluid label-dark">
     <div class="row" id="posts">
 
     </div>
