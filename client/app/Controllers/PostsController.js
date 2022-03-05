@@ -3,6 +3,7 @@ import { postsService } from "../Services/PostsService.js";
 import { logger } from "../Utils/Logger.js";
 
 
+
 function _draw() {
     let template = ''
     ProxyState.posts.forEach(p => template += p.Template)
@@ -76,10 +77,10 @@ export class PostsController {
             logger.log(error)
         }
     }
-    async deletePost(id){
+    async deletePost(id) {
         try {
             await postsService.deletePost(id)
-            
+
         } catch (error) {
             console.error(error);
         }
