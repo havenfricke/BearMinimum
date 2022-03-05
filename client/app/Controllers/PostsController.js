@@ -53,4 +53,5 @@ export class PostsController {
             logger.log(error)
         }
     }
+
 }
