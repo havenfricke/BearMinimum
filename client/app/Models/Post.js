@@ -16,7 +16,7 @@ export class Post {
         <div class="rounded shadow bg-white">
           <div class="rounded-top text-center p-2">
             <h4 class="d-flex justify-content-between">
-              <i class="mdi mdi-delete selectable" title="delete post" onclick=""></i>
+              <i class="mdi mdi-delete selectable" title="delete post" onclick="app.postsController.deletePost('${this.id}')"></i>
             </h4>
           </div>
 
@@ -45,7 +45,7 @@ export class Post {
           </div>
       </div>
 
-      <form id="commentform" class="p-3" onsubmit="app.commentsController.addComment('${this.id}')">
+      <form id="commentform" class="m-3" onsubmit="app.commentsController.addComment('${this.id}')">
       <div class="input-group">
       <textarea minlength="3" maxlength="100" class="form-control" id="exampleFormControlTextarea1" rows="3">     </textarea>
           </div>
