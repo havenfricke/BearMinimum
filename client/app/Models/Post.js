@@ -39,21 +39,20 @@ export class Post {
             <div>
            
       <div>
-      <div style="height:33vh; overflow:auto;">
+      <div class="comment-section">
           ${this.CommentsTemplate}
           </div>
           </div>
       </div>
 
-
-      <form id="commentform" class="px-3 pb-2" onsubmit="app.commentsController.addComment('${this.id}')">
+      <form id="commentform" class="p-3" onsubmit="app.commentsController.addComment('${this.id}')">
       <div class="input-group">
-        <input required minlength="3" maxlength="50" type="text" class="form-control" placeholder="add a comment..." aria-label="comment"
-          aria-describedby="comment" id="name">
+      <textarea minlength="3" maxlength="100" class="form-control" id="exampleFormControlTextarea1" rows="3">     </textarea>
+          </div>
+ 
       </div>
     </form>
-        
-        </div>
+ 
       </div>
       </div>
         `

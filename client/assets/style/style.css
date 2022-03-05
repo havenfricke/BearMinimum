@@ -2,3 +2,8 @@
  transform: translateY(-28vh);
  
 }
+
+.comment-section{
+height:fit-content; 
+overflow:auto;
+}
