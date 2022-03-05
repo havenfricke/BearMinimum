@@ -7,16 +7,16 @@ export class Post {
     this.title = data.title
     this.description = data.description
     this.imgUrl = data.imgUrl
-    this.upVotes = data.upVotes
-    this.downVotes = data.downVotes
+    this.upVotesPost = data.upVotesPost
+    this.downVotesPost = data.downVotesPost
   }
   get Template() {
     return `
-        <div class="col-4">
-        <div class="rounded shadow bg-white">
+        <div class="col-md-5">
+        <div class="rounded shadow modal-bg modal-bg">
           <div class="rounded-top text-center p-2">
             <h4 class="d-flex justify-content-between">
-              <i class="mdi mdi-delete selectable" title="delete post" onclick=""></i>
+              <i class="mdi mdi-delete selectable" title="delete post" onclick="app.postsController.deletePost('${this.id}')"></i>
             </h4>
           </div>
 
@@ -24,8 +24,8 @@ export class Post {
             <img class="col-12 p-3" src="${this.imgUrl}" alt="">
             <div class="row">
               <div class="col-12 d-flex justify-content-around">
-                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button" onclick="app.postsController.upVote()">${this.upVotes}</i>
-                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button" onclick="app.postsController.downVote()">${this.downVotes}</i>
+                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button" onclick="app.postsController.upVotesPost('${this.id}')">${this.upVotesPost}</i>
+                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button" onclick="app.postsController.downVotesPost('${this.id}')">${this.downVotesPost}</i>
                 
               
               </div>
@@ -39,21 +39,20 @@ export class Post {
             <div>
            
       <div>
-      <div style="height:33vh; overflow:auto;">
+      <div class="comment-section">
           ${this.CommentsTemplate}
           </div>
           </div>
       </div>
 
-
-      <form id="commentform" class="px-3 pb-2" onsubmit="app.commentsController.addComment('${this.id}')">
+      <form id="commentform" class="m-3" onsubmit="app.commentsController.addComment('${this.id}')">
       <div class="input-group">
-        <input required minlength="3" maxlength="50" type="text" class="form-control" placeholder="add a comment..." aria-label="comment"
-          aria-describedby="comment" id="name">
+      <textarea minlength="3" maxlength="100" class="form-control" id="exampleFormControlTextarea1" rows="3">     </textarea>
+          </div>
+ 
       </div>
     </form>
-        
-        </div>
+ 
       </div>
       </div>
         `

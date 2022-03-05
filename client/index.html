@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bebas+Neue&family=Pacifico&family=Secular+One&family=Signika+Negative:wght@300;700&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -35,13 +40,14 @@
 
 
 <body>
+  <img src="/client/assets/img/logo.png" alt="">
 
 
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
       <a class="navbar-brand" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
+        <img src="/client/assets/img/bear_minumum_creative_logo.png" height="45" alt="" loading="lazy">
+        <img src="/client/assets/img/logo.png" alt="">
         <span class="ml-2">BearMinimum</span>
 
         <button class="rounded-pill" data-bs-target="#create-modal" data-bs-toggle="modal"
@@ -71,11 +77,12 @@
 
 
   <!--BS- Modal -->
-  <div class="modal fade" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade modal-bg" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Create a Post</h5>
+        <div class="modal-header label-dark">
+          <h2 class="modal-title" id="exampleModalLabel">Create a Post</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -85,18 +92,19 @@
               <input required type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
                 placeholder="">
             </div>
-            <h3 class="col-12">Create A Post</h3>
             <div class="mb-3 col-5">
-              <label for="" class="form-label">Description</label>
-              <input required type="text" class="form-control" name="description" id="description"
-                aria-describedby="helpId" placeholder="">
-            </div>
-            <div class="mb-3 col-6">
               <label for="" class="form-label">Image Url</label>
               <input required type="text" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="helpId"
-                placeholder="">
+                minlength="3" maxlength="100" placeholder="">
             </div>
-            <button class="col-4 offset-8 btn btn-success">Create</button>
+            <div class="mb-3 col-12">
+              <label for="" class="form-label">Description</label>
+              <input required type="text" class="form-control" name="description" id="description"
+                aria-describedby="helpId" placeholder="" rows="3">
+            </div>
+            <button class="col-4 btn bear-btn">
+              <h3>Create</h3>
+            </button>
           </form>
         </div>
       </div>
@@ -107,118 +115,14 @@
 
 
 
-  <main id="app" class="container-fluid">
-
-    <!-- <div class="row d-flex justify-content-center" id="">
-      <div class="col-md-4 p-3">
-        <div class="rounded shadow bg-white">
-          <div class="rounded-top text-center p-2">
-            <h4 class="d-flex justify-content-between">
-              <i class="mdi mdi-delete selectable" title="delete post" onclick=""></i>
-            </h4>
-          </div>
-
-          <div class="p-3">
-            <img class="col-12 p-3" src="https://via.placeholder.com/500x500" alt="">
-            <div class="row">
-              <div class="col-12 d-flex justify-content-around">
-                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button">20</i>
-                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button">2</i>
-                <button class="col-2 rounded-pill">+</button>
-              </div>
-
-              <div class="col-12 bg-secondary">
-                <h1>Big bear</h1>
-                <h6>Big bear Description</h6>
-              </div>
-            </div>
-
-            <div style="height:33vh; overflow:auto;">
-              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
-                <p><b>User</b></p>
-                <p>User comment</p>
-                <div class="text-end">
-                </div>
-              </div>
-
-              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
-                <p><b>User</b></p>
-                <p>User comment</p>
-                <div class="text-end">
-                </div>
-              </div>
-
-              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
-                <p><b>User</b></p>
-                <p>User comment</p>
-                <div class="text-end">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div> -->
-    </div>
-
-    </span>
-    </div>
+  <main id="app" class="container-fluid label-dark">
 
 
 
   </main>
-  <section class="container-fluid">
+  <section class="container-fluid label-dark">
     <div class="row" id="posts">
-      <div class="col-12">
-        <div class="rounded shadow bg-white">
-          <div class="rounded-top text-center p-2">
-            <h4 class="d-flex justify-content-between">
-              <i class="mdi mdi-delete selectable" title="delete post" onclick=""></i>
-            </h4>
-          </div>
 
-          <div class="p-3">
-            <img class="col-12 p-3" src="https://via.placeholder.com/500x500" alt="">
-            <div class="row">
-              <div class="col-12 d-flex justify-content-around">
-                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button">20</i>
-                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button">2</i>
-                <button class="col-2 rounded-pill">+</button>
-              </div>
-
-              <div class="col-12 bg-secondary">
-                <h1>Big bear</h1>
-                <h6>Big bear Description</h6>
-              </div>
-            </div>
-
-            <div style="height:33vh; overflow:auto;">
-              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
-                <p><b>User</b></p>
-                <p>User comment</p>
-                <div class="text-end">
-                </div>
-              </div>
-
-              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
-                <p><b>User</b></p>
-                <p>User comment</p>
-                <div class="text-end">
-                </div>
-              </div>
-
-              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
-                <p><b>User</b></p>
-                <p>User comment</p>
-                <div class="text-end">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -241,6 +145,6 @@
     crossorigin="anonymous"></script>
 
   <script src="app/main.js" type="module"></script>
-</body> -->
+</body>
 
 </html>

@@ -2,3 +2,38 @@
  transform: translateY(-28vh);
  
 }
+
+.comment-section{
+height:fit-content; 
+overflow:auto;
+}
+
+.label-dark {
+  background-color: #633117;
+}
+
+.modal-bg{
+  background-color:  #914D2B;
+  color: #a77c4f;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.bear-btn {
+  min-width: 300px;
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  outline: #36413B;
+  color: #a77c4f;
+  background-color: #633117;
+  border: 2px solid #36413B;
+  border-radius: 10px;
+  box-shadow: 0 9px #474b56;
+}
+
+
+.btn-active {
+  background-color: #914D2B;
+  transform: translateY(4px);
+}
