@@ -27,4 +27,8 @@ export class CommentsController{
         await commentsService.addComment(rawComment)
         form.reset()
     }
+    async deleteComment(id){
+      
+        await commentsService.deleteComment(id)
+    }
 }
