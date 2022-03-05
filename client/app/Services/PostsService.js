@@ -38,6 +38,12 @@ class PostsService {
         console.log('PostService:Upvote')
 
     }
+    async deletePost(id) {
+        const res = await api.delete(`api/posts/${id}`)
+        ProxyState.posts = ProxyState.posts.filter(p => p.id != id)
+        ProxyState.posts = ProxyState.posts
+        console.log('PostsService:Delete', res.data)
+    }
 }
 
 

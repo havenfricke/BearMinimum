@@ -2,6 +2,7 @@ import { ProxyState } from "../AppState.js";
 import { postsService } from "../Services/PostsService.js";
 import { logger } from "../Utils/Logger.js";
 
+
 function _draw() {
     let template = ''
     ProxyState.posts.forEach(p => template += p.Template)
@@ -45,7 +46,6 @@ export class PostsController {
         }
     }
 
-
     async upVotesPost(id) {
         try {
             await postsService.upVotesPost(id)
@@ -55,3 +55,4 @@ export class PostsController {
     }
 
 }
+

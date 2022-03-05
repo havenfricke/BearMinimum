@@ -12,11 +12,11 @@ export class Post {
   }
   get Template() {
     return `
-        <div class="col-4">
+        <div class="col-md-5">
         <div class="rounded shadow bg-white">
           <div class="rounded-top text-center p-2">
             <h4 class="d-flex justify-content-between">
-              <i class="mdi mdi-delete selectable" title="delete post" onclick=""></i>
+              <i class="mdi mdi-delete selectable" title="delete post" onclick="app.postsController.deletePost('${this.id}')"></i>
             </h4>
           </div>
 
@@ -39,21 +39,20 @@ export class Post {
             <div>
            
       <div>
-      <div style="height:33vh; overflow:auto;">
+      <div class="comment-section">
           ${this.CommentsTemplate}
           </div>
           </div>
       </div>
 
-
-      <form id="commentform" class="px-3 pb-2" onsubmit="app.commentsController.addComment('${this.id}')">
+      <form id="commentform" class="m-3" onsubmit="app.commentsController.addComment('${this.id}')">
       <div class="input-group">
-        <input required minlength="3" maxlength="50" type="text" class="form-control" placeholder="add a comment..." aria-label="comment"
-          aria-describedby="comment" id="name">
+      <textarea minlength="3" maxlength="100" class="form-control" id="exampleFormControlTextarea1" rows="3">     </textarea>
+          </div>
+ 
       </div>
     </form>
-        
-        </div>
+ 
       </div>
       </div>
         `
