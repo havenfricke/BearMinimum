@@ -8,10 +8,6 @@ function _draw() {
     document.getElementById('posts').innerHTML = template
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c0d2fdb2e1fdc7f2b1297451dd2d26a19390e5e1
 export class PostsController {
     constructor() {
         this.getPosts()
