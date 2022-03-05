@@ -54,14 +54,5 @@ export class PostsController {
         }
     }
 
-    async deletePost(id) {
-        try {
-            // if (await Pop.confirm()){
-            await postsService.deletePost(id)
-            // }
-        } catch (error) {
-            logger.log(error)
-        }
-    }
 }
 
