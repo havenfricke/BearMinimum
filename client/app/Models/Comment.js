@@ -11,14 +11,14 @@ export class Comment{
     }
     get Template(){
         return `
-        <div style="overflow:scroll">
+        
         <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
           <p><b>${this.user}</b> <i class="mdi mdi-delete selectable" title="delete comment" onclick="app.commentsController.deleteComment('${this.id}')"></i></p>
           <p>${this.description}</p>
           <div class="text-end">
           </div>
           </div>
-         </div> 
+         
         
         `
     }
