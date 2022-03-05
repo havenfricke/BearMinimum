@@ -1,6 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import { Post } from "../Models/Post.js";
 import { api } from "./AxiosService.js"
+import { commentsService } from "./CommentsService.js";
 
 class PostsService{
     async getPosts(){
@@ -9,6 +10,7 @@ class PostsService{
         console.log(res.data);
         ProxyState.posts = res.data.map(p => new Post(p))
         console.log(ProxyState.posts);
+        
     }
 }
 
