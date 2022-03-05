@@ -4,6 +4,10 @@ import { api } from "./AxiosService.js"
 import { commentsService } from "./CommentsService.js";
 
 class PostsService {
+    filterByOld() {
+        const sortedActivities = ProxyState.posts.slice().sort((a, b) => Math.trunc(a.timestamps - b.timestamps))
+        ProxyState.posts = ProxyState.posts
+    }
     async upVotesPost(id) {
         ProxyState.posts.find(p => p.id == id)
         let addVote = ProxyState.posts
@@ -13,6 +17,11 @@ class PostsService {
         ProxyState.posts = ProxyState.posts
         console.log('PostService:UpvotePosts')
 
+    }
+
+    async filterByNew() {
+        const sortedActivities = ProxyState.posts.slice().sort((a, b) => Math.trunc(b.timestamps - a.timestamps))
+        ProxyState.posts = ProxyState.posts
     }
     async getPosts() {
         const res = await api.get('api/posts')

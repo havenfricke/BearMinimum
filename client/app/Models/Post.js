@@ -9,6 +9,7 @@ export class Post {
     this.imgUrl = data.imgUrl
     this.upVotesPost = data.upVotesPost
     this.downVotesPost = data.downVotesPost
+    this.timestamps = data.timestamps
   }
   get Template() {
     return `
