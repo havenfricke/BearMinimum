@@ -45,16 +45,24 @@ export class Post {
           </div>
       </div>
 
-      <form id="commentform" class="m-3" onsubmit="app.commentsController.addComment('${this.id}')">
-      <div class="input-group">
-      <textarea minlength="3" maxlength="100" class="form-control" id="exampleFormControlTextarea1" rows="3">     </textarea>
-          </div>
- 
+
+
+      <form class="row p-2" onsubmit="app.commentsController.addComment('${this.id}')">
+      <div class="mb-3 col-6">
+        <label for="" class="form-label">Comments:</label>
+        <input required type="text" class="form-control" name="description" id="description"
+          aria-describedby="helpId" placeholder="" rows="3">
       </div>
+
     </form>
+
+
+      </div>
+
  
       </div>
       </div>
+      
         `
   }
   get CommentsTemplate() {

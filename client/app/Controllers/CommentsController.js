@@ -20,7 +20,7 @@ export class CommentsController {
         let form = window.event.target
         const rawComment = {
             postId,
-            description: form.name.value,
+            description: form.description.value,
         }
         await commentsService.addComment(rawComment)
         form.reset()
