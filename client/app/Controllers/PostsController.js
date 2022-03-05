@@ -27,7 +27,7 @@ export class PostsController {
         window.event.preventDefault()
         const form = window.event.target
         const newPost = {
-            
+
             /**@ts-ignore */
             title: form.title.value,
             /**@ts-ignore */
@@ -37,6 +37,7 @@ export class PostsController {
         }
         console.log('new post', newPost)
         await postsService.createPost(newPost)
+        /**@ts-ignore */
         form.reset()
         try {
         } catch (error) {
@@ -44,4 +45,15 @@ export class PostsController {
         }
     }
 
+
+    upVote(id) {
+        let upVote = 0
+        upVote++
+        try {
+            postsService.upVote(upVote)
+            postsService.upVote(id)
+        } catch (error) {
+
+        }
+    }
 }
