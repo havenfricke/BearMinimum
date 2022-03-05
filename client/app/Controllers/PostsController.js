@@ -37,6 +37,7 @@ export class PostsController {
         }
         console.log('new post', newPost)
         await postsService.createPost(newPost)
+        /**@ts-ignore */
         form.reset()
         try {
         } catch (error) {
@@ -44,4 +45,12 @@ export class PostsController {
         }
     }
 
+
+    async upVotesPost(id) {
+        try {
+            await postsService.upVotesPost(id)
+        } catch (error) {
+            logger.log(error)
+        }
+    }
 }

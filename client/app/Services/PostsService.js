@@ -4,15 +4,25 @@ import { api } from "./AxiosService.js"
 import { commentsService } from "./CommentsService.js";
 
 class PostsService {
+    async upVotesPost(id) {
+        ProxyState.posts.find(p => p.id == id)
+        let addVote = ProxyState.posts
+        const found = addVote.find(Post => id == Post.id)
+        found.upVotesPost++
+        const res = await api.put(`api/posts/${found.id}`, found)
+        ProxyState.posts = ProxyState.posts
+        console.log('PostService:UpvotePosts')
+
+    }
     async getPosts() {
         const res = await api.get('api/posts')
 
         console.log(res.data);
         ProxyState.posts = res.data.map(p => new Post(p))
         console.log(ProxyState.posts);
-        
+
     }
-    async createPost(rawPost){
+    async createPost(rawPost) {
         const res = await api.post('api/posts', rawPost)
         console.log(res.data);
         const newPost = new Post(res.data)
