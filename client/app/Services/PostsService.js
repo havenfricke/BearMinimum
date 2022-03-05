@@ -3,16 +3,21 @@ import { Post } from "../Models/Post.js";
 import { api } from "./AxiosService.js"
 import { commentsService } from "./CommentsService.js";
 
-class PostsService{
-    async getPosts(){
+class PostsService {
+    async upVote(upVote, id) {
+        ProxyState.posts.find(p => p.id == id)
+
+
+    }
+    async getPosts() {
         const res = await api.get('api/posts')
 
         console.log(res.data);
         ProxyState.posts = res.data.map(p => new Post(p))
         console.log(ProxyState.posts);
-        
+
     }
-    async createPost(rawPost){
+    async createPost(rawPost) {
         const res = await api.post('api/posts', rawPost)
         console.log(res.data);
         const newPost = new Post(res.data)
