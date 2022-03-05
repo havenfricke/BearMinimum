@@ -7,8 +7,8 @@ export class Post {
     this.title = data.title
     this.description = data.description
     this.imgUrl = data.imgUrl
-    this.upVotes = data.upVotes
-    this.downVotes = data.downVotes
+    this.upVotesPost = data.upVotesPost
+    this.downVotesPost = data.downVotesPost
   }
   get Template() {
     return `
@@ -24,8 +24,8 @@ export class Post {
             <img class="col-12 p-3" src="${this.imgUrl}" alt="">
             <div class="row">
               <div class="col-12 d-flex justify-content-around">
-                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button" onclick="app.postsController.upVote()">${this.upVotes}</i>
-                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button" onclick="app.postsController.downVote()">${this.downVotes}</i>
+                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button" onclick="app.postsController.upVotesPost('${this.id}')">${this.upVotesPost}</i>
+                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button" onclick="app.postsController.downVotesPost('${this.id}')">${this.downVotesPost}</i>
                 
               
               </div>

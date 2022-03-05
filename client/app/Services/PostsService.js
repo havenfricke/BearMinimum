@@ -4,9 +4,14 @@ import { api } from "./AxiosService.js"
 import { commentsService } from "./CommentsService.js";
 
 class PostsService {
-    async upVotePosts(upVote, id) {
+    async upVotesPost(id) {
         ProxyState.posts.find(p => p.id == id)
-
+        let addVote = ProxyState.posts
+        const found = addVote.find(Post => id == Post.id)
+        found.upVotesPost++
+        const res = await api.put(`api/posts/${found.id}`, found)
+        ProxyState.posts = ProxyState.posts
+        console.log('PostService:UpvotePosts')
 
     }
     async getPosts() {

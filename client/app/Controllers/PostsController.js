@@ -46,14 +46,11 @@ export class PostsController {
     }
 
 
-    async upVotePosts(id) {
-        let upVote = 0
-        upVote++
+    async upVotesPost(id) {
         try {
-            postsService.upVote(upVote)
-            postsService.upVote(id)
+            await postsService.upVotesPost(id)
         } catch (error) {
-
+            logger.log(error)
         }
     }
 }

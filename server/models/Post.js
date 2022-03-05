@@ -9,9 +9,9 @@ export const PostSchema = new Schema(
     title: { type: String, required: true },
     description: { type: String, required: true },
     creatorId: { type: Schema.Types.ObjectId, ref: 'Profile', required: true },
-    imgUrl: {type: String, required: true},
-    upVotes: {type: Number,  default: 0},
-    downVotes: {type: Number,  default: 0},
+    imgUrl: { type: String, required: true },
+    upVotesPost: { type: Number, default: 0 },
+    downVotesPost: { type: Number, default: 0 }
 
 
   },
