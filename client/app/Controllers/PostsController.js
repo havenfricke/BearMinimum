@@ -1,12 +1,12 @@
 import { ProxyState } from "../AppState.js";
 import { postsService } from "../Services/PostsService.js";
+import { logger } from "../Utils/Logger.js";
 
 function _draw() {
     let template = ''
     ProxyState.posts.forEach(p => template += p.Template)
     document.getElementById('posts').innerHTML = template
 }
-
 
 export class PostsController {
     constructor() {
@@ -46,7 +46,7 @@ export class PostsController {
     }
 
 
-    upVote(id) {
+    async upVotePosts(id) {
         let upVote = 0
         upVote++
         try {
