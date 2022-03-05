@@ -21,12 +21,13 @@ export class CommentsController {
         const rawComment = {
             postId,
             description: form.name.value,
-
-
         }
         await commentsService.addComment(rawComment)
         form.reset()
     }
+
+    async deleteComment(id) {
+
+        await commentsService.deleteComment(id)
+    }
 }
-
-

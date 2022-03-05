@@ -32,7 +32,11 @@
   </style>
 </head>
 
-<body class="debug">
+
+
+<body class="">
+
+
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
       <a class="navbar-brand" href="#">
@@ -40,31 +44,8 @@
           loading="lazy">
         <span class="ml-2">BearMinimum</span>
 
-        <button class="rounded-pill" data-bs-target="#modal" data-bs-toggle="modal" title="add a post...">+</button>
-
-        <div id="modal" class="modal">
-
-
-          <div class="modal-dialog container bg-dark" role="document">
-            <span class="modal-body">
-              <form class="row  p-2" onsubmit="thing(event)">
-                <h3 class="col-12">Create A Post</h3>
-                <div class="mb-3 col-5">
-                  <label for="" class="form-label">Comment</label>
-                  <input required type="text" class="form-control" name="make" id="make" aria-describedby="helpId"
-                    placeholder="">
-                </div>
-                <div class="mb-3 col-6">
-                  <label for="" class="form-label">ImgUrl</label>
-                  <input required type="text" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="helpId"
-                    placeholder="">
-                </div>
-                <button class="col-4 offset-8 btn btn-success">Create</button>
-              </form>
-            </span>
-          </div>
-
-        </div>
+        <button class="rounded-pill" data-bs-target="#create-modal" data-bs-toggle="modal"
+          title="add a post...">+</button>
 
 
       </a>
@@ -87,6 +68,43 @@
       </select>
     </nav>
   </header>
+
+
+  <!--BS- Modal -->
+  <div class="modal fade" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row p-2" onsubmit="thing(event)">
+            <div class="mb-3 col-6">
+              <label for="" class="form-label">Post <Title></Title></label>
+              <input required type="text" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="helpId"
+                placeholder="">
+            </div>
+            <h3 class="col-12">Create A Post</h3>
+            <div class="mb-3 col-5">
+              <label for="" class="form-label">Comment</label>
+              <input required type="text" class="form-control" name="make" id="make" aria-describedby="helpId"
+                placeholder="">
+            </div>
+            <div class="mb-3 col-6">
+              <label for="" class="form-label">ImgUrl</label>
+              <input required type="text" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="helpId"
+                placeholder="">
+            </div>
+            <button class="col-4 offset-8 btn btn-success">Create</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 
   <main id="app" class="container-fluid">
@@ -203,6 +221,7 @@
       </div>
     </div>
   </section>
+
   <footer class="container-fluid bg-dark text-light">
     <div class="row text-center">
       <div class="col">
@@ -222,6 +241,6 @@
     crossorigin="anonymous"></script>
 
   <script src="app/main.js" type="module"></script>
-</body>
+</body> -->
 
 </html>

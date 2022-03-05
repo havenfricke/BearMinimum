@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { postsService } from "../Services/PostsService.js";
+import { logger } from "../Utils/Logger.js";
 
 function _draw() {
     let template = ''
@@ -25,6 +26,7 @@ export class PostsController {
     async addUpVote(id) {
         window.event.preventDefault()
         await postsService.upVote(id)
+        console.log('PostController:Upvote')
 
     }
 }

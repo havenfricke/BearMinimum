@@ -17,6 +17,7 @@ class PostsService {
         found.upVotes++
         const res = await api.put(`api/posts/${found.id}`, found)
         ProxyState.posts = ProxyState.posts
+        console.log('PostService:Upvote')
 
     }
 }
