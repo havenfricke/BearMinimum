@@ -37,3 +37,7 @@ overflow:auto;
   background-color: #914D2B;
   transform: translateY(4px);
 }
+
+.post-styling{
+  background-color: #ddd1c4;
+}

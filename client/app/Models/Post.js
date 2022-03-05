@@ -13,14 +13,14 @@ export class Post {
   get Template() {
     return `
         <div class="col-md-5">
-        <div class="rounded shadow modal-bg modal-bg">
-          <div class="rounded-top text-center p-2">
+        <div class="rounded shadow">
+          <div class="rounded-top post-styling text-center p-2">
             <h4 class="d-flex justify-content-between">
               <i class="mdi mdi-delete selectable" title="delete post" onclick="app.postsController.deletePost('${this.id}')"></i>
             </h4>
           </div>
 
-          <div class="p-3">
+          <div class="p-3 post-styling">
             <img class="col-12 p-3" src="${this.imgUrl}" alt="">
             <div class="row">
               <div class="col-12 d-flex justify-content-around">
