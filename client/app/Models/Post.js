@@ -7,12 +7,12 @@ export class Post {
     this.title = data.title
     this.description = data.description
     this.imgUrl = data.imgUrl
-    this.upVotesPost = data.upVotes
-    this.downVotesPost = data.downVotes
+    this.upVotesPost = data.upVotesPost
+    this.downVotesPost = data.downVotesPost
   }
   get Template() {
     return `
-        <div class="col-md-5">
+        <div class="col-md-5 my-2">
         <div class="rounded shadow">
           <div class="rounded-top post-styling text-center p-2">
             <h4 class="d-flex justify-content-between">

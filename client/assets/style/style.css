@@ -41,3 +41,9 @@ overflow:auto;
 .post-styling{
   background-color: #ddd1c4;
 }
+
+.nav-styling{
+    background-color:  #533627;
+    color: #a77c4f;
+    font-family: 'Bebas Neue', cursive;
+}
