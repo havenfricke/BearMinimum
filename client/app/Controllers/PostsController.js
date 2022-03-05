@@ -23,22 +23,24 @@ export class PostsController {
         }
     }
 
-    async createPost(id) {
+    async createPost() {
         window.event.preventDefault()
         const form = window.event.target
         const newPost = {
-            id,
+            
             /**@ts-ignore */
-            title: form.title.target,
+            title: form.title.value,
             /**@ts-ignore */
-            description: form.description.target,
+            description: form.description.value,
             /**@ts-ignore */
-            imgUrl: form.imgUrl.target
+            imgUrl: form.imgUrl.value
         }
         console.log('new post', newPost)
+        await postsService.createPost(newPost)
+        form.reset()
         try {
         } catch (error) {
-
+            console.error(error);
         }
     }
 

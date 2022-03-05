@@ -12,6 +12,12 @@ class PostsService{
         console.log(ProxyState.posts);
         
     }
+    async createPost(rawPost){
+        const res = await api.post('api/posts', rawPost)
+        console.log(res.data);
+        const newPost = new Post(res.data)
+        ProxyState.posts = [...ProxyState.posts, newPost]
+    }
 }
 
 
