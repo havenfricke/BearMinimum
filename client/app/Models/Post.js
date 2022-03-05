@@ -39,7 +39,9 @@ export class Post{
             <div>
            
       <div>
+      <div style="height:33vh; overflow:auto;">
           ${this.CommentsTemplate}
+          </div>
           </div>
       </div>
 
