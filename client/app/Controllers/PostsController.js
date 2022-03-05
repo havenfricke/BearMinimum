@@ -28,11 +28,11 @@ export class PostsController {
         const form = window.event.target
         const newPost = {
             /**@ts-ignore */
-            title: form.title.target,
+            title: form.title.value,
             /**@ts-ignore */
-            description: form.description.target,
+            description: form.description.value,
             /**@ts-ignore */
-            imgUrl: form.imgUrl.target
+            imgUrl: form.imgUrl.value
         }
         console.log('new post', newPost)
         try {

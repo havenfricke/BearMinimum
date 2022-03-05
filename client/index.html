@@ -61,10 +61,10 @@
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
       <select class="form-control mx-2 col-1" name="sauce" id="sauce">
         <option disabled selected>Filter</option>
-        <option>Newest Posts</option>
-        <option>Oldest Posts</option>
-        <option>Most Upvotes</option>
-        <option>Most Downvotes</option>
+        <option onclick="app.postsController.filterByNew()">Newest Posts</option>
+        <option onclick="app.postsController.filterByOld()">Oldest Posts</option>
+        <option onclick="app.postsController.filterByUp()">Most Upvotes</option>
+        <option onclick="app.postsController.filterByDown()">Most Downvotes</option>
       </select>
     </nav>
   </header>
