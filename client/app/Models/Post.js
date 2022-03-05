@@ -24,8 +24,8 @@ export class Post {
             <img class="col-12 p-3" src="${this.imgUrl}" alt="">
             <div class="row">
               <div class="col-12 d-flex justify-content-around">
-                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button" onclick="app.postController.addUpVote(${this.id})>${this.upVotes}</i>
-                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button">${this.downVotes}</i>
+                <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button" onclick="app.postsController.upVote()">${this.upVotes}</i>
+                <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button" onclick="app.postsController.downVote()">${this.downVotes}</i>
                 
               
               </div>

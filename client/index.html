@@ -34,7 +34,7 @@
 
 
 
-<body class="">
+<body class="debug">
 
 
   <header>
@@ -61,10 +61,10 @@
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
       <select class="form-control mx-2 col-1" name="sauce" id="sauce">
         <option disabled selected>Filter</option>
-        <option>Newest Posts</option>
-        <option>Oldest Posts</option>
-        <option>Most Upvotes</option>
-        <option>Most Downvotes</option>
+        <option onclick="app.postsController.filterByNew()">Newest Posts</option>
+        <option onclick="app.postsController.filterByOld()">Oldest Posts</option>
+        <option onclick="app.postsController.filterByUp()">Most Upvotes</option>
+        <option onclick="app.postsController.filterByDown()">Most Downvotes</option>
       </select>
     </nav>
   </header>
@@ -75,24 +75,24 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Create a Post</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form class="row p-2" onsubmit="thing(event)">
+          <form class="row p-2" onsubmit="app.postsController.createPost()">
             <div class="mb-3 col-6">
-              <label for="" class="form-label">Post <Title></Title></label>
-              <input required type="text" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="helpId"
+              <label for="" class="form-label">Post Title</label>
+              <input required type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
                 placeholder="">
             </div>
             <h3 class="col-12">Create A Post</h3>
             <div class="mb-3 col-5">
-              <label for="" class="form-label">Comment</label>
-              <input required type="text" class="form-control" name="make" id="make" aria-describedby="helpId"
-                placeholder="">
+              <label for="" class="form-label">Description</label>
+              <input required type="text" class="form-control" name="description" id="description"
+                aria-describedby="helpId" placeholder="">
             </div>
             <div class="mb-3 col-6">
-              <label for="" class="form-label">ImgUrl</label>
+              <label for="" class="form-label">Image Url</label>
               <input required type="text" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="helpId"
                 placeholder="">
             </div>

@@ -8,6 +8,7 @@ class CommentsService {
         // console.log(res.data);
         ProxyState.comments = res.data.map(c => new Comment(c))
         console.log(ProxyState.comments);
+        ProxyState.posts = ProxyState.posts
     }
     async addComment(rawComment){
         const res = await api.post('api/comments', rawComment)
@@ -21,6 +22,22 @@ class CommentsService {
         ProxyState.comments = ProxyState.comments.filter(c => c.id != id)
         ProxyState.posts = ProxyState.posts
     }
+    async addUpVote(id){
+      let currentComment = ProxyState.comments.find(c => c.id == id)
+        currentComment.upVotes++
+       
+        // console.log(currentComment);
+        await api.put(`api/comments/${id}`, currentComment)
+        ProxyState.posts = ProxyState.posts
+    }
+    async addDownVote(id){
+        let currentComment = ProxyState.comments.find(c => c.id == id)
+          currentComment.downVotes++
+          
+          await api.put(`api/comments/${id}`, currentComment)
+        //   console.log(currentComment);
+        ProxyState.posts = ProxyState.posts
+      }
 }
 
 export const commentsService = new CommentsService()
