@@ -15,6 +15,9 @@ class CommentsService {
     async edit(body){
         const originalComment = await dbContext.Comments.findById(body.id)
         originalComment.description = body.description ? body.description : originalComment.description
+        originalComment.upVotes = body.upVotes ? body.upVotes : originalComment.upVotes
+        originalComment.downVotes = body.downVotes ? body.downVotes : originalComment.downVotes
+
         await originalComment.save()
         await originalComment.populate('creator', 'name')
         return originalComment

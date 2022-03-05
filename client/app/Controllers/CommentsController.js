@@ -31,4 +31,10 @@ export class CommentsController{
       
         await commentsService.deleteComment(id)
     }
+    async addUpVote(id){
+        await commentsService.addUpVote(id)
+    }
+    async addDownVote(id){
+        await commentsService.addDownVote(id)
+    }
 }
