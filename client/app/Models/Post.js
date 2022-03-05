@@ -26,7 +26,8 @@ export class Post{
               <div class="col-12 d-flex justify-content-around">
                 <i class="mdi mdi-arrow-up-bold-box-outline fs-1 text-green" type="button">${this.upVotes}</i>
                 <i class="mdi mdi-arrow-down-bold-box-outline fs-1 text-red" type="button">${this.downVotes}</i>
-                <button class="col-2 rounded-pill">+</button>
+                
+              
               </div>
 
               <div class="col-12 bg-secondary">
@@ -41,6 +42,14 @@ export class Post{
           ${this.CommentsTemplate}
           </div>
       </div>
+
+
+      <form id="commentform" class="px-3 pb-2" onsubmit="app.commentsController.addComment('${this.id}')">
+      <div class="input-group">
+        <input required minlength="3" maxlength="50" type="text" class="form-control" placeholder="add a comment..." aria-label="comment"
+          aria-describedby="comment" id="name">
+      </div>
+    </form>
         
         </div>
       </div>
